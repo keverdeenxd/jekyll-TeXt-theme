@@ -22,7 +22,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : # does not include hostname
 title   : Katniss Blogs xD
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  Welcome to my space on the web, where I get to share my thoughts, experiences, and everything that’s keeping me inspired. Whether it's diving into design, tech, or just random musings from my life, this is where I let you in on my world. With a passion for creating, tech tinkering, and a lot of heart, I’m here to give you a behind-the-scenes look at everything that sparks my interest. Stick around, there’s always something new around the corner.
 
 
 ## => Language and Timezone
