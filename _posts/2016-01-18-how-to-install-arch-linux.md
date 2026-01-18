@@ -4,9 +4,6 @@ Arch Linux is a popular, lightweight, and flexible Linux distribution known for 
 
 In this guide, we'll walk through the steps to install Arch Linux on your system, from downloading the installation image to configuring your desktop environment.
 
-
----
-
 Prerequisites
 
 Before you begin, make sure you have the following:
@@ -19,10 +16,6 @@ A machine capable of booting from a USB drive
 
 Backup of your important data (just in case something goes wrong)
 
-
-
----
-
 Step 1: Download Arch Linux ISO
 
 1. Go to the official Arch Linux website and download the latest ISO image.
@@ -30,10 +23,6 @@ Step 1: Download Arch Linux ISO
 
 2. Verify the integrity of the ISO by checking its checksum to ensure it's not corrupted.
 
-
-
-
----
 
 Step 2: Create a Bootable USB Drive
 
@@ -52,9 +41,6 @@ On Windows:
 
 Use a tool like Rufus to write the ISO to the USB drive.
 
-
----
-
 Step 3: Boot from USB
 
 1. Plug the bootable USB drive into your machine.
@@ -67,11 +53,6 @@ Step 3: Boot from USB
 
 
 4. Once the system boots up, you'll see the Arch Linux boot prompt.
-
-
-
-
----
 
 Step 4: Set Up the Internet Connection
 
@@ -89,17 +70,11 @@ station device_name connect your_wifi_network
 
 Replace device_name with your wireless device (e.g., wlan0), and your_wifi_network with the network name.
 
-
----
-
 Step 5: Update the System Clock
 
 Next, update your system clock to ensure accurate timekeeping during the installation process.
 
 timedatectl set-ntp true
-
-
----
 
 Step 6: Partition the Disk
 
@@ -134,9 +109,6 @@ You can verify your partitions with:
 
 lsblk
 
-
----
-
 Step 7: Format the Partitions
 
 Once the partitions are created, format them accordingly.
@@ -155,9 +127,6 @@ If you created a home partition:
 
 mkfs.ext4 /dev/sda3
 
-
----
-
 Step 8: Mount the Partitions
 
 Mount the root partition to /mnt:
@@ -173,9 +142,6 @@ Mount the EFI partition:
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 
-
----
-
 Step 9: Install Base System
 
 Use the pacstrap command to install the base system, which includes the core packages for Arch Linux.
@@ -183,9 +149,6 @@ Use the pacstrap command to install the base system, which includes the core pac
 pacstrap /mnt base linux linux-firmware vim
 
 You can also add additional packages if you need them (e.g., nano for a text editor, or sudo for permissions).
-
-
----
 
 Step 10: Configure the System
 
@@ -236,9 +199,6 @@ passwd
 
 Enter and confirm your root password.
 
-
----
-
 Step 11: Install Bootloader
 
 For UEFI systems, you’ll need to install a bootloader. The recommended choice is systemd-boot.
@@ -265,9 +225,6 @@ linux   /vmlinuz-linux
 initrd  /initramfs-linux.img
 options root=/dev/sda2 rw
 
-
----
-
 Step 12: Exit and Reboot
 
 1. Exit from chroot:
@@ -291,8 +248,6 @@ reboot
 Be sure to remove the USB drive before the system starts booting.
 
 
----
-
 Step 13: Post-Installation
 
 Once you boot into your new Arch Linux system, you can begin installing a desktop environment (like GNOME, KDE, or XFCE) and configuring other software packages.
@@ -307,9 +262,6 @@ Install network tools, like NetworkManager.
 
 
 For a detailed, up-to-date guide, visit the Arch Wiki.
-
-
----
 
 Conclusion
 
